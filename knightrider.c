@@ -3,7 +3,7 @@
  
 #define ON_DELAY_MS 30
 #define OFF_DELAY_MS 1000
- 
+/* 
 void flash (void) {
   PORTD = 0b01010101;
   _delay_ms(ON_DELAY_MS);
@@ -23,7 +23,7 @@ while(count--) {
       _delay_us(1);
    }
 }
-
+*/
 void main (void)
 {
  DDRD = 0b11111111;
