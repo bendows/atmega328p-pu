@@ -19,4 +19,4 @@ flash: default
 	avr-objcopy -O ihex -R .eeprom $< $@
 
 clean:
-	rm -v *.hex
+	rm -v *.o *.hex
