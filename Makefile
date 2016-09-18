@@ -7,7 +7,7 @@ CFLAGS=$(MCU) $(CPU_SPEED) -Os -w
 default: knightrider.hex
 
 flash: default
-	avrdude -V -c stk500v1 -p ATMEGA328P -P /dev/ttyUSB0 -b 19200 -U flash:w:knightrider.hex
+	avrdude -V -c stk500v1 -p ATMEGA328P -P /dev/ttyUSB4 -b 19200 -U flash:w:knightrider.hex
 
 %.o: %.c
 	avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o $@ $<

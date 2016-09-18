@@ -1,0 +1,28 @@
+# STANDOLINE ATMEGA328P-PU
+
+VCC = +5V
+
+VCC - R 10k   -	1	28
+		2	27
+		3	26
+		4	25
+		5	24
+		6	23
+VCC  - 		7	22   	- 	GND
+GND  -		8	21	-	VCC
+GND  - C 22pF -	9	20	-	VCC
+GND  - C 22pF -	10	19
+		11	18
+		12	17
+		13	16
+		14	15
+
+
+stk500v1 isp connections
+
+standalone 				isp
+
+1		-			D10
+17		-			D11
+18		-			D12
+19		-			D13
