@@ -1,7 +1,7 @@
 CC=avr-gcc
 MCU=-mmcu=atmega328p 
-CPU_SPEED=-DF_CPU=16000000UL
-CFLAGS=$(MCU) $(CPU_SPEED) -Os -w
+CPU_SPEED?=8000000
+CFLAGS=$(MCU) -DF_CPU=$(CPU_SPEED)UL -Os -w
 # Can other things "flash"? Or be "flashed"? The word has several definitions.
 .PHONY: default
 default: knightrider.hex
@@ -10,7 +10,7 @@ flash: default
 	avrdude -V -c stk500v1 -p ATMEGA328P -P /dev/ttyUSB4 -b 19200 -U flash:w:knightrider.hex
 
 %.o: %.c
-	avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o $@ $<
+	avr-gcc ${CFLAGS} -c -o $@ $<
 
 %.out: %.o
 	avr-gcc -mmcu=atmega328p $< -o $@

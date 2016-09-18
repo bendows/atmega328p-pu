@@ -29,9 +29,9 @@ void main (void)
  DDRD = 0b11111111;
  while(1) {
 	 for (PORTD = 0x01; PORTD != 0; PORTD <<= 1) 
-		 _delay_ms(90);
+		 _delay_ms(70);
 	 for (PORTD = 0x80; PORTD != 0; PORTD >>= 1) 
-		 _delay_ms(90);
+		 _delay_ms(70);
 
  }
 }
