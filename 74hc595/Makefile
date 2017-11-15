@@ -4,10 +4,10 @@ CPU_SPEED?=16000000
 CFLAGS=$(MCU) -DF_CPU=$(CPU_SPEED)UL -Os -w
 # Can other things "flash"? Or be "flashed"? The word has several definitions.
 .PHONY: default
-default: knightrider.hex
+default: shift.hex
 
 flash: default
-	avrdude -V -c stk500v1 -p ATMEGA328P -P /dev/ttyUSB0 -b 19200 -U flash:w:knightrider.hex
+	avrdude -V -c stk500v1 -p ATMEGA328P -P /dev/ttyUSB0 -b 19200 -U flash:w:shift.hex
 
 %.o: %.c
 	avr-gcc ${CFLAGS} -c -o $@ $<

@@ -34,13 +34,13 @@ void main (void)
 		 _delay_ms(110);
 		 */
 	 PORTD = 0b01010101;
-		 _delay_ms(100);
+		 _delay_ms(1000);
 	 for (PORTD = 0x80; PORTD != 0; PORTD >>= 1) 
-		 _delay_ms(50);
+		 _delay_ms(1000);
 	 PORTD = 0b01010101;
-		 _delay_ms(100);
+		 _delay_ms(1000);
 	 for (PORTD = 0x01; PORTD != 0; PORTD <<= 1) 
-		 _delay_ms(50);
+		 _delay_ms(1000);
 	 /*
 	 PORTD = 0b10101010;
 		 _delay_ms(110);
