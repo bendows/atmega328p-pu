@@ -17,15 +17,59 @@ GND  - C 22pF -	10	19
 		13	16
 		14	15
 
+Using an Arduino Nano as an ISP programmer (running the stk500v1 ISP scetch) to program a standalone Atemga328p-pu chip.
 
-stk500v1 isp connections
+standalone Atmega328p-pu <<->> Arduino Nano connections
 
-standalone 				isp
+	standalone Atmega328p-pu connections and connections to Nano
 
-1		-			D10
-17		-			D11
-18		-			D12
-19		-			D13
+If the fuses on the Atmega328p-pu is set for using the internal 8Mz clock you dont need to connect an external crystal to the Atmega328p-pu
+If the fuses on the Atmega328p-pu is set for using an external clock, connect an external 16Mz crystal to pins 9 and 10 on the atmega328p-pu standalone chip
+I did not need to connect two 22pF caps from pin 9 to GND and from PIN 10 to GND respectively.
+
+	D10    	1	28
+		2	27
+		3	26
+		4	25
+		5	24
+		6	23
+VCC   		7	22 	 	GND
+GND  		8	21		VCC
+		9	20		VCC
+    		10	19	D13
+		11	18	D12
+		12	17	D11
+		13	16
+		14	15
+
+	Arduino Nano connections
+
+The Arduino Nano is connected to the computer via a USB to MINI USB cable which also supplies VCC to the Nano.
+The VCC of the Nano (+4.8V in this case) is made available externaly on the '+5V' pin of the Nano which is used to supply VCC to the standalone Atmega328p-pu chip as well.
+The '+5V' pin of the Nano is the 4th pin, when counting from the Nano\'s VIN pin on the same side of the Nano and must be connected to VCC so that the Atemga328p-pu gets power.
+Therefore, the standalone Atmega328p-pu chip\'s GND bus must be connected to any of the 2 GND pins of the the Arduino Nano.
+For Nano clones I had to connect a 10uF electrolytic cap between any of the 2 RST and GND pairs on the Arduino Nano
+On my Nano clone A0-A7 was labeled in reverse
+
+	MINI USB CONNECTOR HERE
+
+	    	D13	D12	
+		3v3	D11
+		AREF	D10
+		A0	D9	<-- orange LED --> GND (heartbeat)
+		A1	D8	<-- red LED --> GND (bad IO activity)
+		A2	D7	<-- green LED --> GND (good IO activity)
+		A3	D6
+		A4	D5	
+		A5	D4
+		A6	D3
+		A7	D2
+VCC  <--	+5V	GND		GND
+		RST	RST
+GND 		GND	RX0	
+ 		VIN	TX1
+
+	ICSP HEADER HERE
 
 Example make output:
 
