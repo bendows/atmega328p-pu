@@ -33,9 +33,9 @@ I did not need to connect two 22pF caps from pin 9 to GND and from PIN 10 to GND
 		4	25
 		5	24
 		6	23
-VCC   		7	22 	 	GND
-GND  		8	21		VCC
-		9	20		VCC
+VCC   		7	22  	GND
+GND  		8	21	VCC
+		9	20	VCC
     		10	19	D13
 		11	18	D12
 		12	17	D11
@@ -56,9 +56,9 @@ On my Nano clone A0-A7 was labeled in reverse
 	    	D13	D12	
 		3v3	D11
 		AREF	D10
-		A0	D9	<-- orange LED --> GND (heartbeat)
-		A1	D8	<-- red LED --> GND (bad IO activity)
-		A2	D7	<-- green LED --> GND (good IO activity)
+		A0	D9	<-- orange LED 	--> GND (heartbeat)
+		A1	D8	<-- red LED 	--> GND (bad IO activity)
+		A2	D7	<-- green LED 	--> GND (good IO activity)
 		A3	D6
 		A4	D5	
 		A5	D4
