@@ -24,7 +24,9 @@ standalone Atmega328p-pu <<->> Arduino Nano connections
 	standalone Atmega328p-pu connections and connections to Nano
 
 If the fuses on the Atmega328p-pu is set for using the internal 8Mz clock you dont need to connect an external crystal to the Atmega328p-pu
-If the fuses on the Atmega328p-pu is set for using an external clock, connect an external 16Mz crystal to pins 9 and 10 on the atmega328p-pu standalone chip
+If the fuses on the Atmega328p-pu is set for using an external clock, connect an external 16Mz crystal to pins 9 and 10 on the atmega328p-pu 
+standalone chip
+
 I did not need to connect two 22pF caps from pin 9 to GND and from PIN 10 to GND respectively.
 
 	D10    	1	28
@@ -45,8 +47,9 @@ GND  		8	21	VCC
 	Arduino Nano connections
 
 The Arduino Nano is connected to the computer via a USB to MINI USB cable which also supplies VCC to the Nano.
-The VCC of the Nano (+4.8V in this case) is made available externaly on the '+5V' pin of the Nano which is used to supply VCC to the standalone Atmega328p-pu chip as well.
-The '+5V' pin of the Nano is the 4th pin, when counting from the Nano\'s VIN pin on the same side of the Nano and must be connected to VCC so that the Atemga328p-pu gets power.
+The VCC of the Nano (+4.8V in this case) is made available externaly on the '+5V' pin of the Nano which is used to supply VCC to the 
+standalone Atmega328p-pu chip as well. The '+5V' pin of the Nano is the 4th pin, when counting from the Nano\'s VIN pin on 
+the same side of the Nano and must be connected to VCC so that the Atemga328p-pu gets power.
 Therefore, the standalone Atmega328p-pu chip\'s GND bus must be connected to any of the 2 GND pins of the the Arduino Nano.
 For Nano clones I had to connect a 10uF electrolytic cap between any of the 2 RST and GND pairs on the Arduino Nano
 On my Nano clone A0-A7 was labeled in reverse
