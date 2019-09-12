@@ -97,7 +97,7 @@ apt-get install avrdude
 apt-get install gcc-avr
 
 
-root@ben-Vostro-3560:/home/ben# avrdude -vvvV -c stk500v1 -p ATMEGA328P -P /dev/ttyUSB0 -b 19200
+# avrdude -vvvV -c stk500v1 -p ATMEGA328P -P /dev/ttyUSB0 -b 19200
 
 avrdude: Version 6.2
          Copyright (c) 2000-2005 Brian Dean, http://www.bdmicro.com/
