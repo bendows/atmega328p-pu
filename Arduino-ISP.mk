@@ -1,13 +1,10 @@
 # Arduino Nano as an ISP Programmer
 
-Open up the "ArduinoISP" sketch under "file"->"examples"->"ArduinoISP" in the 
-Arduino IDE on windows or Linux
+Open up the "ArduinoISP" sketch under "file"->"examples"->"ArduinoISP" in the Arduino IDE on windows or Linux
 
-If you are using the Arduino 1.0 or later IDE you need to 
-change the delay value of the heartbeat. Find
+If you are using the Arduino 1.0 or later IDE you need to change the delay value of the heartbeat. Find
 
-// this provides a heartbeat on pin 9, so you can tell the software 
-// is running.
+// this provides a heartbeat on pin 9, so you can tell the software is running.
 uint8_t hbval=128;
 int8_t hbdelta=8;
 void heartbeat() {
@@ -28,9 +25,9 @@ http://www.martyncurrey.com/arduino-on-a-breadboard/
 	    	D13	D12	
 		3v3	D11
 		AREF	D10
-		A0	D9   <- orange LED 	-> GND (heartbeat)
-		A1	D8   <- red LED 	-> GND (bad IO activity)
-		A2	D7   <- green LED 	-> GND (good IO activity)
+		A0	D9   <- orange LED   -> GND (heartbeat)
+		A1	D8   <- red LED      -> GND (bad IO activity)
+		A2	D7   <- green LED    -> GND (good IO activity)
 		A3	D6
 		A4	D5	
 		A5	D4
