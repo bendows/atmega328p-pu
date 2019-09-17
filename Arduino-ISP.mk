@@ -20,6 +20,8 @@ and change the delay(40) to delay(20). Then, compile and upload the sketch.
 http://www.martyncurrey.com/arduino-nano-as-an-isp-programmer/
 http://www.martyncurrey.com/arduino-on-a-breadboard/
 
+	Nano connections:
+
 	MINI USB CONNECTOR HERE
 
 	    	D13	D12	
@@ -46,7 +48,7 @@ On a clone I needed a 10uf electrolytic cap between reset and GND
 # https://github.com/nickgammon/arduino_sketches
 # http://www.gammon.com.au/forum/?id=11635#
 #
-# STANDOLINE ATMEGA328P-PU using internal oscilator
+# STANDOLINE ATMEGA328P-PU connections (using internal oscilator as clock):
 #
 
 VCC = +5V
