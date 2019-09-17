@@ -24,8 +24,8 @@ http://www.martyncurrey.com/arduino-on-a-breadboard/
 
 	MINI USB CONNECTOR HERE
 
-	    	D13	D12	
-		3v3	D11
+  19	    	D13	D12 	18	
+		3v3	D11 	17
 		AREF	D10
 		A0	D9   <- orange LED   -> GND (heartbeat)
 		A1	D8   <- red LED      -> GND (bad IO activity)
@@ -42,7 +42,7 @@ GND  <-		GND	RX0
 
 	ICSP HEADER HERE
 
-On a clone I needed a 10uf electrolytic cap between reset and GND 
+On a Nano clone I needed a 10uf electrolytic cap between reset and GND 
 (on any one of the sides, of the Nano)
 
 # https://github.com/nickgammon/arduino_sketches
@@ -79,12 +79,9 @@ If the fuses on the Atmega328p-pu is set for using the internal 8Mz clock you do
 If the fuses on the Atmega328p-pu is set for using an external clock, connect an external 16Mz crystal to pins 9 and 10 on the atmega328p-pu 
 standalone chip
 
-The Arduino Nano is connected to the computer via a USB to MINI USB cable which also supplies VCC to the Nano.
-The VCC of the Nano (+4.8V in this case) is made available externaly on the '+5V' pin of the Nano which is used to supply VCC to the 
-standalone Atmega328p-pu chip as well. The '+5V' pin of the Nano is the 4th pin, when counting from the Nano's VIN pin on 
-the same side of the Nano and must be connected to the Atemga328p-pu VCC.
+The Arduino Nano is connected to the computer via a USB to MINI USB cable which also supplies VCC to the standalone atmega328p-pu via it's +5 pin
+The VCC of the Nano (+4.8V in this case)
 The standalone Atmega328p-pu and Nano must also share grounds.
-For Nano clones I had to connect a 10uF electrolytic cap between any of the 2 RST and GND pairs on the Arduino Nano
 On my Nano clone A0-A7 was labeled in reverse
 
 # dmesg -T
