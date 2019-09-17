@@ -86,6 +86,8 @@ On my Nano clone A0-A7 was labeled in reverse
 
 apt-get install avrdude
 apt-get install gcc-avr
+apt-get install avr-libc
+
 
 dmesg -T
 
