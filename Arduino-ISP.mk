@@ -48,7 +48,8 @@ On a clone I needed a 10uf electrolytic cap between reset and GND
 # https://github.com/nickgammon/arduino_sketches
 # http://www.gammon.com.au/forum/?id=11635#
 #
-# STANDOLINE ATMEGA328P-PU connections (using internal oscilator as clock):
+# STANDOLINE ATMEGA328P-PU connections: 
+# (using internal oscilator as clock):
 #
 
 VCC = +5V
