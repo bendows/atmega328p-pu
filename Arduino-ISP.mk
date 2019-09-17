@@ -84,7 +84,10 @@ The VCC of the Nano (+4.8V in this case)
 The standalone Atmega328p-pu and Nano must also share grounds.
 On my Nano clone A0-A7 was labeled in reverse
 
-# dmesg -T
+apt-get install avrdude
+apt-get install gcc-avr
+
+dmesg -T
 
 [Thu Sep 12 22:57:40 2019] usb 3-1: USB disconnect, device number 8
 [Thu Sep 12 22:57:40 2019] ftdi_sio ttyUSB0: FTDI USB Serial Device converter now disconnected from ttyUSB0
@@ -99,11 +102,7 @@ On my Nano clone A0-A7 was labeled in reverse
 [Thu Sep 12 22:57:42 2019] usb 3-1: Detected FT232RL
 [Thu Sep 12 22:57:42 2019] usb 3-1: FTDI USB Serial Device converter now attached to ttyUSB0
 
-apt-get install avrdude
-apt-get install gcc-avr
-
-
-# avrdude -vvvV -c stk500v1 -p ATMEGA328P -P /dev/ttyUSB0 -b 19200
+avrdude -vvvV -c stk500v1 -p ATMEGA328P -P /dev/ttyUSB0 -b 19200
 
 avrdude: Version 6.2
          Copyright (c) 2000-2005 Brian Dean, http://www.bdmicro.com/
