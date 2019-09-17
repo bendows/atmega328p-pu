@@ -1,7 +1,8 @@
 # Arduino Nano as an ISP Programmer
 
-Open up the "ArduinoISP" sketch under "file"->"examples"->"ArduinoISP" 
-in the Arduino IDE on windows or Linux
+Open up the "ArduinoISP" sketch under 
+"file"->"examples"->"ArduinoISP" in the 
+Arduino IDE on windows or Linux
 
 If you are using the Arduino 1.0 or later IDE you need to 
 change the delay value of the heartbeat. Find
