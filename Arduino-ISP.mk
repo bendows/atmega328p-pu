@@ -19,36 +19,56 @@ delay(40);
 
 and change the delay(40) to delay(20). Then, compile and upload the sketch.
 
-http://www.martyncurrey.com/arduino-on-a-breadboard/
 http://www.martyncurrey.com/arduino-nano-as-an-isp-programmer/
+http://www.martyncurrey.com/arduino-on-a-breadboard/
 
-apt install avrdude
-apt install gcc-avr
+	MINI USB CONNECTOR HERE
+
+	    	D13	D12	
+		3v3	D11
+		AREF	D10
+		A0	D9	<- orange LED 	-> GND (heartbeat)
+		A1	D8	<- red LED 	-> GND (bad IO activity)
+		A2	D7	<- green LED 	-> GND (good IO activity)
+		A3	D6
+		A4	D5	
+		A5	D4
+		A6	D3
+		A7	D2
+VCC  <-		+5V	GND			  ->	GND
+		RST	RST  <- 10uF electrolytic -> 	GND
+GND  <-		GND	RX0	
+ 		VIN	TX1
+
+	ICSP HEADER HERE
+
+On a clone I needed a 10uf electrolytic cap between reset and GND 
+(on any one of the sides, of the Nano)
 
 # https://github.com/nickgammon/arduino_sketches
 # http://www.gammon.com.au/forum/?id=11635#
 #
-# STANDOLINE ATMEGA328P-PU
+# STANDOLINE ATMEGA328P-PU using internal oscilator
 #
-#
+
 VCC = +5V
 
-VCC - R 10k   -	1	28
-		2	27
-		3	26
-		4	25
-		5	24
-		6	23
-VCC  - 		7	22   	- 	GND
-GND  -		8	21	-	VCC
-GND  - C 22pF -	9	20	-	VCC
-GND  - C 22pF -	10	19
-		11	18
-		12	17
-		13	16
-		14	15
+VCC <- R 10k -> D10 <->	1	28	
+			2	27
+			3	26
+			4	25
+			5	24
+			6	23
+	VCC  <-		7	22   	-> 	GND
+	GND  <-		8	21	->	VCC
+			9	20	->	VCC
+			10	19	->	D13
+			11	18	->	D12
+			12	17	->	D11
+			13	16
+			14	15
 
-Using an Arduino Nano as an ISP programmer (running the stk500v1 ISP scetch) to program a standalone Atemga328p-pu chip.
+running the stk500v1 ISP scetch
 
 standalone Atmega328p-pu <<->> Arduino Nano connections
 
@@ -58,54 +78,14 @@ If the fuses on the Atmega328p-pu is set for using the internal 8Mz clock you do
 If the fuses on the Atmega328p-pu is set for using an external clock, connect an external 16Mz crystal to pins 9 and 10 on the atmega328p-pu 
 standalone chip
 
-I did not need to connect two 22pF caps from pin 9 to GND and from PIN 10 to GND respectively.
-
-	D10    	1	28
-		2	27
-		3	26
-		4	25
-		5	24
-		6	23
-VCC   		7	22  	GND
-GND  		8	21	VCC
-		9	20	VCC
-    		10	19	D13
-		11	18	D12
-		12	17	D11
-		13	16
-		14	15
-
-	Arduino Nano connections
-
 The Arduino Nano is connected to the computer via a USB to MINI USB cable which also supplies VCC to the Nano.
 The VCC of the Nano (+4.8V in this case) is made available externaly on the '+5V' pin of the Nano which is used to supply VCC to the 
-standalone Atmega328p-pu chip as well. The '+5V' pin of the Nano is the 4th pin, when counting from the Nano\'s VIN pin on 
-the same side of the Nano and must be connected to VCC so that the Atemga328p-pu gets power.
-Therefore, the standalone Atmega328p-pu chip\'s GND bus must be connected to any of the 2 GND pins of the the Arduino Nano.
+standalone Atmega328p-pu chip as well. The '+5V' pin of the Nano is the 4th pin, when counting from the Nano's VIN pin on 
+the same side of the Nano and must be connected to the Atemga328p-pu VCC.
+The standalone Atmega328p-pu and Nano must also share grounds.
 For Nano clones I had to connect a 10uF electrolytic cap between any of the 2 RST and GND pairs on the Arduino Nano
 On my Nano clone A0-A7 was labeled in reverse
 
-	MINI USB CONNECTOR HERE
-
-	    	D13	D12	
-		3v3	D11
-		AREF	D10
-		A0	D9	<-- orange LED 	--> GND (heartbeat)
-		A1	D8	<-- red LED 	--> GND (bad IO activity)
-		A2	D7	<-- green LED 	--> GND (good IO activity)
-		A3	D6
-		A4	D5	
-		A5	D4
-		A6	D3
-		A7	D2
-VCC  <--	+5V	GND		GND
-		RST	RST
-GND 		GND	RX0	
- 		VIN	TX1
-
-	ICSP HEADER HERE
-
-On the NANO maybe need a 10Uf electrolytic between reset and GND on the VIN pins side
 # dmesg -T
 
 [Thu Sep 12 22:57:40 2019] usb 3-1: USB disconnect, device number 8
