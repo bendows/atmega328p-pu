@@ -27,7 +27,7 @@ void main (void) {
 	PORTD = 0; _delay_ms(250); PORTD = 0b10101010; _delay_ms(150);
 	PORTD = 0; _delay_ms(250);
 	for (PORTD=0;PORTD<255;PORTD++) { 		//Count from 0 to 255
-		 _delay_ms(50);
+		 _delay_ms(250);
 	}
  }
 }
