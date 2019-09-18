@@ -26,7 +26,7 @@ http://www.martyncurrey.com/arduino-on-a-breadboard/
 
   19	    	D13	D12 	18	
 		3v3	D11 	17
-		AREF	D10
+		AREF	D10	1
 		A0	D9   <- orange LED   -> GND (heartbeat)
 		A1	D8   <- red LED      -> GND (bad IO activity)
 		A2	D7   <- green LED    -> GND (good IO activity)
