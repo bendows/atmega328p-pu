@@ -42,6 +42,9 @@ GND  <-		GND	RX0
 
 	ICSP HEADER HERE
 
+Connect 4 jumper wires between Nano and Atmega328p-PU
+Use another 2 jumper wires (for ground and V+) from Nano to Atmega328p-PU 
+
 On a Nano clone I needed a 10uf electrolytic cap between reset and GND 
 (on any one of the sides, of the Nano)
 
