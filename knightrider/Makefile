@@ -18,7 +18,7 @@ print_vars:
 default: $(FILENAME).hex
 
 flash: default
-        avrdude -vvV -c stk500v1 -p ATMEGA328P -P /dev/ttyUSB0 -b 19200 -U flash:w:$(FILENAME).hex
+        avrdude -vvV -c stk500v1 -p ATMEGA328P -P /dev/$(TTYUSB) -b 19200 -U flash:w:$(FILENAME).hex
 
 %.o: %.c
         avr-gcc ${CFLAGS} -c -o $@ $<
