@@ -1,6 +1,6 @@
 # Stand Alone Arduino ATmega328p pu
 
-To turn the Nano into a programmer burn the "ArduinoISP" sketch to it under "file"->"examples"->"ArduinoISP" in the Arduino IDE
+To turn a Nano into a programmer burn the "ArduinoISP" sketch to it under "file"->"examples"->"ArduinoISP" in the Arduino IDE
 If you are using the Arduino 1.0 or later IDE you need to change the delay value of the heartbeat:
 Find:
 ```bash
