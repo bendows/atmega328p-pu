@@ -20,14 +20,17 @@ and change the delay(40) to delay(20).
 ```
 * Then compile and upload the sketch.
 
-http://www.martyncurrey.com/arduino-on-a-breadboard/
-http://www.martyncurrey.com/arduino-nano-as-an-isp-programmer/
-
 apt install avrdude
 apt install gcc-avr
 
+# Many thanks to these good resources:
+
+http://www.martyncurrey.com/arduino-on-a-breadboard/
+http://www.martyncurrey.com/arduino-nano-as-an-isp-programmer/
+
 # https://github.com/nickgammon/arduino_sketches
 # http://www.gammon.com.au/forum/?id=11635#
+
 VCC = +5V
 
 VCC - R 10k   -	1	28
