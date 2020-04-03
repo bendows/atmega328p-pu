@@ -69,11 +69,14 @@ standalone Atmega328p-pu <<->> Arduino Nano connections
 
 	standalone Atmega328p-pu connections and connections to Nano
 
-If the fuses on the Atmega328p-pu is set for using the internal 8Mz clock you dont need to connect an external crystal to the Atmega328p-pu
-If the fuses on the Atmega328p-pu is set for using an external clock, connect an external 16Mz crystal to pins 9 and 10 on the atmega328p-pu 
-standalone chip
+If the fuses on the standalone Atmega328p-pu is set for using the internal 8Mz clock you dont need to connect an external crystal
+If the fuses on the Atmega328p-pu is set for using an external clock, connect an external 16Mz crystal to pins 9 and 10 of the standalone Atmega328p-pu
 
-I did not need to connect two 22pF caps from pin 9 to GND and from PIN 10 to GND respectively.
+I did not need to connect two 22pF caps from pin 9 to GND and from PIN 10 to GND respectively, but it's probably a good idea
+```
+```txt
+
+Pinouts
 
 	D10    	1	28
 		2	27
