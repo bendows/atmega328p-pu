@@ -8,12 +8,12 @@ TTYUSB?=ttyUSB0
 .PHONY: print_vars
 
 print_vars:
-        avrdude -vvvV -c stk500v1 -p ATMEGA328P -P /dev/$(TTYUSB) -b 19200
-        echo $(FILENAME)
-        echo $(MCU)
-        echo $(F_CPU)
-        echo $(TTYUSB)
-        echo $(CFLAGS)
+		avrdude -vvvV -c stk500v1 -p ATMEGA328P -P /dev/$(TTYUSB) -b 19200
+		echo $(FILENAME)
+		echo $(MCU)
+		echo $(F_CPU)
+		echo $(TTYUSB)
+		echo $(CFLAGS)
 
 default: $(FILENAME).hex
 
