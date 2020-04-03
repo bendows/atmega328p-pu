@@ -16,8 +16,9 @@ analogWrite(LED_HB, hbval);
 delay(40);
 }
 //
-// and change the delay(40) to delay(20). Then compile and upload the sketch.
+and change the delay(40) to delay(20).
 ```
+* Then compile and upload the sketch.
 
 http://www.martyncurrey.com/arduino-on-a-breadboard/
 http://www.martyncurrey.com/arduino-nano-as-an-isp-programmer/
