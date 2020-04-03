@@ -22,11 +22,9 @@ and change the delay(40) to delay(20).
 
 Install software (Ubuntu)
 ```bash
-apt install avrdude
-apt install gcc-avr
+apt install avrdude gcc-avr
 or
-apt-get install avrdude
-apt-get install gcc-avr
+apt-get install avrdude gcc-avr
 ```
 
 Install software (ArcoLinuxB-openbox)
