@@ -1,9 +1,9 @@
 # Stand Alone Arduino ATmega328p pu
 
-```bash
 To turn the Nano into a programmer burn the "ArduinoISP" sketch to it under "file"->"examples"->"ArduinoISP" in the Arduino IDE
 If you are using the Arduino 1.0 or later IDE you need to change the delay value of the heartbeat:
 Find:
+```bash
 //
 // this provides a heartbeat on pin 9, so you can tell the software is running.
 uint8_t hbval=128;
@@ -20,8 +20,11 @@ and change the delay(40) to delay(20).
 ```
 * Then compile and upload the sketch.
 
+Install software (Ubuntu)
+```bash
 apt install avrdude
 apt install gcc-avr
+```
 
 # Many thanks to these good resources:
 
