@@ -2,9 +2,9 @@
 
 To turn the Nano into a programmer burn the "ArduinoISP" sketch to it under "file"->"examples"->"ArduinoISP" in the Arduino IDE
 
-If you are using the Arduino 1.0 or later IDE you need to change the delay value of the heartbeat. Find
-
-
+// If you are using the Arduino 1.0 or later IDE you need to change the delay value of the heartbeat:
+// Find:
+//
 // this provides a heartbeat on pin 9, so you can tell the software is running.
 uint8_t hbval=128;
 int8_t hbdelta=8;
@@ -15,8 +15,9 @@ hbval += hbdelta;
 analogWrite(LED_HB, hbval);
 delay(40);
 }
+//
+// and change the delay(40) to delay(20). Then compile and upload the sketch.
 
-and change the delay(40) to delay(20). Then compile and upload the sketch.
 
 http://www.martyncurrey.com/arduino-on-a-breadboard/
 http://www.martyncurrey.com/arduino-nano-as-an-isp-programmer/
