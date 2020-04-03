@@ -33,7 +33,7 @@ https://github.com/nickgammon/arduino_sketches
 
 http://www.gammon.com.au/forum/?id=11635#
 
-txt```
+```txt
 VCC = +5V
 
 VCC - R 10k   -	1	28
