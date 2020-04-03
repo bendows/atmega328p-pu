@@ -1,4 +1,4 @@
-# STANDOLINE ATMEGA328P-PU
+# STANDOLINE ATMEGA328P PU
 
 ```bash
 To turn the Nano into a programmer burn the "ArduinoISP" sketch to it under "file"->"examples"->"ArduinoISP" in the Arduino IDE
