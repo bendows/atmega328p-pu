@@ -80,8 +80,6 @@ respectively, but it's probably a good idea
 
 ```txt
 
-Pinouts
-
 	D10    	1	28
 		2	27
 		3	26
