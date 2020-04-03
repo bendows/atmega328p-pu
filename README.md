@@ -50,6 +50,7 @@ GND  - C 22pF -	10	19
 		12	17
 		13	16
 		14	15
+```
 
 Using an Arduino Nano as an ISP programmer (running the stk500v1 ISP scetch) to program a standalone Atemga328p-pu chip.
 
