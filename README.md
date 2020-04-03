@@ -103,7 +103,7 @@ the same side of the Nano and must be connected to VCC so that the Atemga328p-pu
 Therefore, the standalone Atmega328p-pu chip\'s GND bus must be connected to any of the 2 GND pins of the the Arduino Nano.
 For Nano clones I had to connect a 10uF electrolytic cap between any of the 2 RST and GND pairs on the Arduino Nano
 On my Nano clone A0-A7 was labeled in reverse
-
+```txt
 	MINI USB CONNECTOR HERE
 
 	    	D13	D12	
@@ -123,8 +123,11 @@ GND 		GND	RX0
  		VIN	TX1
 
 	ICSP HEADER HERE
+```
 
 On the NANO maybe need a 10Uf electrolytic between reset and GND on the VIN pins side
+
+```txt
 # dmesg -T
 
 [Thu Sep 12 22:57:40 2019] usb 3-1: USB disconnect, device number 8
@@ -139,8 +142,6 @@ On the NANO maybe need a 10Uf electrolytic between reset and GND on the VIN pins
 [Thu Sep 12 22:57:42 2019] ftdi_sio 3-1:1.0: FTDI USB Serial Device converter detected
 [Thu Sep 12 22:57:42 2019] usb 3-1: Detected FT232RL
 [Thu Sep 12 22:57:42 2019] usb 3-1: FTDI USB Serial Device converter now attached to ttyUSB0
-```
-
 
 # avrdude -vvvV -c stk500v1 -p ATMEGA328P -P /dev/ttyUSB0 -b 19200
 
@@ -254,6 +255,7 @@ Example make output:
 
 # pwd
 # /home/ben
+YELLOW
 # avrdude -V -c stk500v1 -p ATMEGA328P -P /dev/ttyUSB0 -b 19200
 # avrdude -V -c stk500v1 -p ATMEGA328P -P /dev/ttyUSB0 -b 19200
 avrdude: ser_open(): can't open device "/dev/ttyUSB0": Permission denied
