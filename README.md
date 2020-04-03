@@ -26,8 +26,11 @@ apt install gcc-avr
 # Many thanks to these good resources:
 
 http://www.martyncurrey.com/arduino-on-a-breadboard/
+
 http://www.martyncurrey.com/arduino-nano-as-an-isp-programmer/
+
 https://github.com/nickgammon/arduino_sketches
+
 http://www.gammon.com.au/forum/?id=11635#
 
 VCC = +5V
