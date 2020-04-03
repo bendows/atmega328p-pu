@@ -22,7 +22,7 @@ and change the delay(40) to delay(20).
 
 Install software (Ubuntu)
 ```bash
-apt install avrdude gcc-avr
+apt install avrdude gcc-avr avr-libc
 or
 apt-get install avrdude gcc-avr avr-libc
 ```
