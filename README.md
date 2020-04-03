@@ -24,6 +24,9 @@ Install software (Ubuntu)
 ```bash
 apt install avrdude
 apt install gcc-avr
+or
+apt-get install avrdude
+apt-get install gcc-avr
 ```
 
 Install software (ArcoLinuxB-openbox)
@@ -61,7 +64,7 @@ GND  - C 22pF -	10	19
 		14	15
 ```
 # Using the Arduino Nano as an ISP programmer (running the stk500v1 ISP scetch) to program a standalone Atemga328p pu.
-
+```txt
 standalone Atmega328p-pu <<->> Arduino Nano connections
 
 	standalone Atmega328p-pu connections and connections to Nano
@@ -132,9 +135,7 @@ On the NANO maybe need a 10Uf electrolytic between reset and GND on the VIN pins
 [Thu Sep 12 22:57:42 2019] ftdi_sio 3-1:1.0: FTDI USB Serial Device converter detected
 [Thu Sep 12 22:57:42 2019] usb 3-1: Detected FT232RL
 [Thu Sep 12 22:57:42 2019] usb 3-1: FTDI USB Serial Device converter now attached to ttyUSB0
-
-apt-get install avrdude
-apt-get install gcc-avr
+```
 
 
 # avrdude -vvvV -c stk500v1 -p ATMEGA328P -P /dev/ttyUSB0 -b 19200
