@@ -26,6 +26,12 @@ apt install avrdude
 apt install gcc-avr
 ```
 
+Install software (ArcoLinuxB-openbox)
+```bash
+pacman -S avr-gcc
+pacman -S avrdude
+```
+
 # Many thanks to these good resources:
 
 http://www.martyncurrey.com/arduino-on-a-breadboard/
