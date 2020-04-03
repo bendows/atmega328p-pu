@@ -1,5 +1,6 @@
 # STANDOLINE ATMEGA328P-PU
 
+```bash
 To turn the Nano into a programmer burn the "ArduinoISP" sketch to it under "file"->"examples"->"ArduinoISP" in the Arduino IDE
 
 // If you are using the Arduino 1.0 or later IDE you need to change the delay value of the heartbeat:
@@ -17,7 +18,7 @@ delay(40);
 }
 //
 // and change the delay(40) to delay(20). Then compile and upload the sketch.
-
+```
 
 http://www.martyncurrey.com/arduino-on-a-breadboard/
 http://www.martyncurrey.com/arduino-nano-as-an-isp-programmer/
