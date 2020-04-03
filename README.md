@@ -24,7 +24,7 @@ Install software (Ubuntu)
 ```bash
 apt install avrdude gcc-avr
 or
-apt-get install avrdude gcc-avr
+apt-get install avrdude gcc-avr avr-libc
 ```
 
 Install software (ArcoLinuxB-openbox)
