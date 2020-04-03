@@ -76,6 +76,8 @@ If the fuses on the Atmega328p-pu is set for using an external clock, connect an
 of the standalone Atmega328p-pu. I did not need to connect two 22pF caps from pin 9 to GND and from PIN 10 to GND 
 respectively, but it's probably a good idea
 ```
+# Arduino Nano connections
+
 ```txt
 
 Pinouts
@@ -94,8 +96,7 @@ GND  		8	21	VCC
 		12	17	D11
 		13	16
 		14	15
-
-	Arduino Nano connections
+```
 
 The Arduino Nano is connected to the computer via a USB to MINI USB cable which also supplies VCC to the Nano.
 The VCC of the Nano (+4.8V in this case) is made available externaly on the '+5V' pin of the Nano which is used to supply VCC to the 
