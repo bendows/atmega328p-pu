@@ -44,6 +44,13 @@ https://github.com/nickgammon/arduino_sketches
 http://www.gammon.com.au/forum/?id=11635#
 
 ```txt
+# To compile cross.c using a 16Mgz clock
+sudo FILENAME=cross make 16Mzclock flash
+# To compile cross.c using an 8Mgz internal clock
+sudo FILENAME=cross make internalclock flash
+```
+
+```txt
 VCC = +5V
 
 VCC - R 10k   -	1	28
