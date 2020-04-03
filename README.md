@@ -33,6 +33,7 @@ https://github.com/nickgammon/arduino_sketches
 
 http://www.gammon.com.au/forum/?id=11635#
 
+txt```
 VCC = +5V
 
 VCC - R 10k   -	1	28
@@ -356,4 +357,4 @@ avrdude: safemode: efuse reads as FD
 avrdude: safemode: Fuses OK (E:FD, H:DF, L:FF)
 
 avrdude done.  Thank you.
-
+```
