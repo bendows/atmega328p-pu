@@ -1,4 +1,4 @@
-# Using the Arduino Nano as an ISP programmer (running the stk500v1 ISP scetch) to program a standalone Atemga328p pu
+# Using the Arduino Nano as an ISP programmer (running the stk500v1 ISP scetch) to program a standalone Atmega328p pu
 
 ## 1. Make the Arduino Nano a programmer
 Burn the "ArduinoISP" sketch under "file"->"examples"->"ArduinoISP" in the Arduino IDE to your Arduino Nano.
@@ -60,7 +60,7 @@ sudo FILENAME=main F_CPU=16000000 make flash
 # or
 sudo FILENAME=main F_CPU=8000000 make flash
 ```
-Breadboard connections for The atmega328p pu
+## 4. Breadboard connections for The atmega328p pu
 ```txt
 VCC = +5V
 
@@ -80,9 +80,8 @@ GND  - C 22pF -	10	19
 		14	15
 ```
 
+## 5. Standalone Atmega328p-pu to Arduino Nano connections
 ```txt
-standalone Atmega328p-pu <<->> Arduino Nano connections
-
 	standalone Atmega328p-pu connections and connections to Nano
 
 If the fuses on the standalone Atmega328p-pu is set for using the internal 8MHz clock 
@@ -92,7 +91,7 @@ If the fuses on the Atmega328p-pu is set for using an external clock, connect an
 of the standalone Atmega328p-pu. I did not need to connect two 22pF caps from pin 9 to GND and from PIN 10 to GND 
 respectively, but it's probably a good idea
 ```
-# Arduino Nano connections
+## 6. Arduino Nano connections
 
 ```txt
 
@@ -115,7 +114,7 @@ GND  		8	21	VCC
 The Arduino Nano is connected to the computer via a USB to MINI USB cable which also supplies VCC to the Nano.
 The VCC of the Nano (+4.8V in this case) is made available externaly on the '+5V' pin of the Nano which is used to supply VCC to the 
 standalone Atmega328p-pu chip as well. The '+5V' pin of the Nano is the 4th pin, when counting from the Nano\'s VIN pin on 
-the same side of the Nano and must be connected to VCC so that the Atemga328p-pu gets power.
+the same side of the Nano and must be connected to VCC so that the Atmega328p-pu gets power.
 Therefore, the standalone Atmega328p-pu chip\'s GND bus must be connected to any of the 2 GND pins of the the Arduino Nano.
 For Nano clones I had to connect a 10uF electrolytic cap between any of the 2 RST and GND pairs on the Arduino Nano
 On my Nano clone A0-A7 was labeled in reverse
