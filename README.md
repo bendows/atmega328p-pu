@@ -21,12 +21,12 @@ and change the delay(40) to delay(20).
 ```
 ## Install software
 
-(Ubuntu)
+Ubuntu
 ```bash
 apt-get install avrdude gcc-avr avr-libc
 ```
 
-(ArcoLinuxB-openbox)
+ArcoLinuxB-openbox
 ```bash
 pacman -S avr-gcc
 pacman -S avrdude
