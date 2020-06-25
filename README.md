@@ -68,43 +68,23 @@ Atmega328p-pu is set to use an external crystal. I did not need to connect
 two 22pF caps from pin 9 to GND and from PIN 10 to GND when using 
 an external crystal, but it's probably a good idea to always add them.
 ```
-```txt
-VCC = +5V
-
-VCC - R 10k   -	1	28
-		2	27
-		3	26
-		4	25
-		5	24
-		6	23
-VCC  - 		7	22   	- 	GND
-GND  -		8	21	-	VCC
-GND  - C 22pF -	9	20	-	VCC
-GND  - C 22pF -	10	19
-		11	18
-		12	17
-		13	16
-		14	15
-```
-
-## 5. Breadboard connections for the Arduino Nano
 
 ```txt
 
-	D10    	1	28
-		2	27
-		3	26
-		4	25
-		5	24
-		6	23
-VCC   		7	22  	GND
-GND  		8	21	VCC
-		9	20	VCC
-    		10	19	D13
-		11	18	D12
-		12	17	D11
-		13	16
-		14	15
+VCC - R 10k D10 -	1	28
+					 2	27
+					 3	26
+					 4	25
+					 5	24
+					 6	23
+VCC  -	      	 7	22    GND
+GND  -	      	 8	21	VCC
+GND  - C 22pF - 	 9	20    VCC
+GND  - C 22pF - 	 10   19	D13
+					 11   18	D12
+					 12   17	D11
+					 13   16
+					 14   15
 ```
 
 The Arduino Nano is connected to the computer via a USB to MINI USB cable which also supplies VCC to the Nano.
