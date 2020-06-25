@@ -33,7 +33,7 @@ pacman -S avr-gcc
 pacman -S avrdude
 ```
 
-## Copy [Makefile](Makefile) to your source directory
+## 3. Copy [Makefile](Makefile) to your source directory
 
 # Many thanks to these good resources:
 
