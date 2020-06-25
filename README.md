@@ -35,6 +35,7 @@ pacman -S avrdude
 
 ## 3. Copy [Makefile](Makefile) and [main.c](main.c) to a directory
 cd into the directory.
+
 Using the Makefile:
 
 ```txt
