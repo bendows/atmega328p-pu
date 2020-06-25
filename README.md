@@ -87,18 +87,7 @@ GND  - C 22pF -	10	19
 		14	15
 ```
 
-## 5. Standalone Atmega328p-pu to Arduino Nano connections
-```txt
-	standalone Atmega328p-pu connections and connections to Nano
-
-If the fuses on the standalone Atmega328p-pu is set for using the internal 8MHz clock 
-you dont need to connect an external crystal
-
-If the fuses on the Atmega328p-pu is set for using an external clock, connect an external 16MHz crystal to pins 9 and 10 
-of the standalone Atmega328p-pu. I did not need to connect two 22pF caps from pin 9 to GND and from PIN 10 to GND 
-respectively, but it's probably a good idea
-```
-## 6. Arduino Nano connections
+## 5. Breadboard connections for the Arduino Nano
 
 ```txt
 
