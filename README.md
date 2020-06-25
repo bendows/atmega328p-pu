@@ -2,29 +2,13 @@
 
 ## 1. Make the Arduino Nano a programmer
 Burn the "ArduinoISP" sketch under "file"->"examples"->"ArduinoISP" in the Arduino IDE to your Arduino Nano.
-If you are using the Arduino 1.0 (or later) IDE you need to change the delay value of the heartbeat:
-Find:
-```bash
-//
-// this provides a heartbeat on pin 9, so you can tell the software is running.
-uint8_t hbval=128;
-int8_t hbdelta=8;
-void heartbeat() {
-if (hbval > 192) hbdelta = -hbdelta;
-if (hbval < 32) hbdelta = -hbdelta;
-hbval += hbdelta;
-analogWrite(LED_HB, hbval);
-delay(40);
-}
-//
-```
-And change the delay(40) to delay(20).
 
-## 2. Install software
+## 2. Install software and setup permissions
 
 Ubuntu
 ```bash
 sudo apt-get install avrdude gcc-avr avr-libc
+sudo usermod -a -G dialout username	//This is for the Arduino IDE
 ```
 
 ArcoLinuxB-openbox
