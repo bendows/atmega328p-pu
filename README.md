@@ -34,7 +34,25 @@ pacman -S avrdude
 ```
 
 ## 3. Copy [Makefile](Makefile) to your source directory
+Using the Makefile
 
+```txt
+# Configure the atmega328p fuze bits for selecting it's internal 8MHz clock
+sudo make 8MHzclock
+
+# Configure the atmega328p fuze bits for selecting an external 16MHz clock
+sudo make 16MHzclock
+
+# Configure the atmega328p fuze bits for selecting it's clock and compile and flash main.c afterwards
+
+sudo FILENAME=main F_CPU=8000000 make 8MHzclock flash
+sudo FILENAME=main F_CPU=16000000 make 16MHzclock flash
+
+# Just compile and flash main.c
+
+sudo FILENAME=main F_CPU=16000000 make 16MHzclock flash
+sudo FILENAME=main F_CPU=16000000 make 8MHzclock flash
+```
 # Many thanks to these good resources:
 
 http://www.martyncurrey.com/arduino-on-a-breadboard/
