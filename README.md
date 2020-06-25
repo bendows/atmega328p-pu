@@ -1,6 +1,7 @@
-# Flashing avr-gcc binaries to a standalone atmega328p-pu using an Arduino Nano
+# Flashing avr-gcc binaries to a standalone atmega328p-pu with an Arduino Nano
 
-To turn a Arduino Nano into a programmer burn the "ArduinoISP" sketch under "file"->"examples"->"ArduinoISP" in the Arduino IDE to it.
+## Make the Arduino Nano a programmer
+function as a programmer burn the "ArduinoISP" sketch under "file"->"examples"->"ArduinoISP" in the Arduino IDE to it.
 If you are using the Arduino 1.0 (or later) IDE you need to change the delay value of the heartbeat:
 Find:
 ```bash
