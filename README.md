@@ -80,17 +80,6 @@ GND  - C 22pF -	10	19
 		14	15
 ```
 
-# Many thanks to these good resources:
-
-http://www.martyncurrey.com/arduino-on-a-breadboard/
-
-http://www.martyncurrey.com/arduino-nano-as-an-isp-programmer/
-
-https://github.com/nickgammon/arduino_sketches
-
-http://www.gammon.com.au/forum/?id=11635#
-
-```txt
 ```txt
 standalone Atmega328p-pu <<->> Arduino Nano connections
 
@@ -401,3 +390,13 @@ avrdude: safemode: Fuses OK (E:FD, H:DF, L:FF)
 
 avrdude done.  Thank you.
 ```
+
+# Many thanks to these good resources:
+
+http://www.martyncurrey.com/arduino-on-a-breadboard/
+
+http://www.martyncurrey.com/arduino-nano-as-an-isp-programmer/
+
+https://github.com/nickgammon/arduino_sketches
+
+http://www.gammon.com.au/forum/?id=11635#
