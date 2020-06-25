@@ -17,8 +17,9 @@ analogWrite(LED_HB, hbval);
 delay(40);
 }
 //
-and change the delay(40) to delay(20).
 ```
+And change the delay(40) to delay(20).
+
 ## Install software
 
 Ubuntu
