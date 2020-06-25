@@ -48,7 +48,7 @@ sudo make 8MHzclock
 sudo make 16MHzclock
 
 # Configure the atmega328p fuze bits for selecting it's clock 
-# and compile, and flash main.c to it
+# and, compile and flash main.c to it
 
 sudo FILENAME=main F_CPU=8000000 make 8MHzclock flash
 # or
