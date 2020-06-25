@@ -1,6 +1,6 @@
 # Flashing avr-gcc binaries to a standalone atmega328p-pu using your Arduino Nano
 
-## Make the Arduino Nano a programmer
+## 1. Make the Arduino Nano a programmer
 Burn the "ArduinoISP" sketch under "file"->"examples"->"ArduinoISP" in the Arduino IDE to your Arduino Nano.
 If you are using the Arduino 1.0 (or later) IDE you need to change the delay value of the heartbeat:
 Find:
@@ -20,7 +20,7 @@ delay(40);
 ```
 And change the delay(40) to delay(20).
 
-## Install software
+## 2. Install software
 
 Ubuntu
 ```bash
