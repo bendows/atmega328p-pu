@@ -34,8 +34,8 @@ pacman -S avrdude
 ```
 
 ## 3. Copy [Makefile](Makefile) and [main.c](main.c) to a directory
-
-Using the Makefile
+cd into the directory.
+Using the Makefile:
 
 ```txt
 # Configure the atmega328p fuze bits for selecting it's internal 8MHz clock
