@@ -33,7 +33,8 @@ pacman -S avr-gcc
 pacman -S avrdude
 ```
 
-## 3. Copy [Makefile](Makefile) to your source directory
+## 3. Copy [Makefile](Makefile) and [main.c](main.c) to a directory
+
 Using the Makefile
 
 ```txt
