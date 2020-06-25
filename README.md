@@ -44,10 +44,21 @@ https://github.com/nickgammon/arduino_sketches
 http://www.gammon.com.au/forum/?id=11635#
 
 ```txt
-# To compile cross.c using a 16Mgz clock
-sudo FILENAME=cross make 16Mzclock flash
-# To compile cross.c using an 8Mgz internal clock
-sudo FILENAME=cross make internalclock flash
+# Configure the atmega328p fuze bits for selecting it's internal 8Mz clock
+sudo make 8Mzclock
+
+# Configure the atmega328p fuze bits for selecting an external 16Mz clock
+sudo make 16Mzclock
+
+# Configure the atmega328p fuze bits for selecting it's clock and compile and flash main.c afterwards
+
+sudo FILENAME=main F_CPU=8000000 make 8Mzclock flash
+sudo FILENAME=main F_CPU=16000000 make 16Mzclock flash
+
+# Just compile and flash main.c
+
+sudo FILENAME=main F_CPU=16000000 make 16Mzclock flash
+sudo FILENAME=main F_CPU=16000000 make 8Mzclock flash
 ```
 
 ```txt
