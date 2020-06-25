@@ -33,7 +33,8 @@ clean:
 	rm -fv *.o *.hex
 
 8MHzclock:
-	avrdude -vvvV -c stk500v1 -p ATMEGA328P -P /dev/$(TTYUSB) -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0xff:m
+	#avrdude -vvvV -c stk500v1 -p ATMEGA328P -P /dev/$(TTYUSB) -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0xff:m
+	avrdude -DvvvV -c stk500v1 -p ATMEGA328P -P /dev/$(TTYUSB) -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0xff:m
 
 16MHzclock:
 	avrdude -vvvV -c stk500v1 -p ATMEGA328P -P /dev/$(TTYUSB) -b 19200 -U lfuse:w:0xff:m -U hfuse:w:0xde:m -U efuse:w:0xfd:m
