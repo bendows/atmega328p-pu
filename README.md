@@ -52,7 +52,7 @@ sudo FILENAME=main F_CPU=16000000 make 16MHzclock flash
 # Just compile and flash main.c
 
 sudo FILENAME=main F_CPU=16000000 make flash
-sudo FILENAME=main F_CPU=16000000 make flash
+sudo FILENAME=main F_CPU=8000000 make flash
 ```
 # Many thanks to these good resources:
 
