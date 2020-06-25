@@ -33,6 +33,8 @@ pacman -S avr-gcc
 pacman -S avrdude
 ```
 
+## Copy [Makefile](Makefile) to your source directory
+
 # Many thanks to these good resources:
 
 http://www.martyncurrey.com/arduino-on-a-breadboard/
@@ -43,7 +45,6 @@ https://github.com/nickgammon/arduino_sketches
 
 http://www.gammon.com.au/forum/?id=11635#
 
-# Copy [Makefile](Makefile) to your source directory
 ```txt
 # Configure the atmega328p fuze bits for selecting it's internal 8MHz clock
 sudo make 8MHzclock
