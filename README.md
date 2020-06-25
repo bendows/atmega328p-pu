@@ -60,16 +60,7 @@ sudo FILENAME=main F_CPU=16000000 make flash
 # or
 sudo FILENAME=main F_CPU=8000000 make flash
 ```
-# Many thanks to these good resources:
-
-http://www.martyncurrey.com/arduino-on-a-breadboard/
-
-http://www.martyncurrey.com/arduino-nano-as-an-isp-programmer/
-
-https://github.com/nickgammon/arduino_sketches
-
-http://www.gammon.com.au/forum/?id=11635#
-
+Breadboard connections for The atmega328p pu
 ```txt
 VCC = +5V
 
@@ -89,6 +80,17 @@ GND  - C 22pF -	10	19
 		14	15
 ```
 
+# Many thanks to these good resources:
+
+http://www.martyncurrey.com/arduino-on-a-breadboard/
+
+http://www.martyncurrey.com/arduino-nano-as-an-isp-programmer/
+
+https://github.com/nickgammon/arduino_sketches
+
+http://www.gammon.com.au/forum/?id=11635#
+
+```txt
 ```txt
 standalone Atmega328p-pu <<->> Arduino Nano connections
 
