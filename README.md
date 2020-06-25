@@ -65,24 +65,6 @@ https://github.com/nickgammon/arduino_sketches
 http://www.gammon.com.au/forum/?id=11635#
 
 ```txt
-# Configure the atmega328p fuze bits for selecting it's internal 8MHz clock
-sudo make 8MHzclock
-
-# Configure the atmega328p fuze bits for selecting an external 16MHz clock
-sudo make 16MHzclock
-
-# Configure the atmega328p fuze bits for selecting it's clock and compile and flash main.c afterwards
-
-sudo FILENAME=main F_CPU=8000000 make 8MHzclock flash
-sudo FILENAME=main F_CPU=16000000 make 16MHzclock flash
-
-# Just compile and flash main.c
-
-sudo FILENAME=main F_CPU=16000000 make 16MHzclock flash
-sudo FILENAME=main F_CPU=16000000 make 8MHzclock flash
-```
-
-```txt
 VCC = +5V
 
 VCC - R 10k   -	1	28
