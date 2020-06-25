@@ -1,4 +1,4 @@
-# Flashing avr-gcc binaries to a standalone atmega328p-pu using your Arduino Nano
+# Using the Arduino Nano as an ISP programmer (running the stk500v1 ISP scetch) to program a standalone Atemga328p pu
 
 ## 1. Make the Arduino Nano a programmer
 Burn the "ArduinoISP" sketch under "file"->"examples"->"ArduinoISP" in the Arduino IDE to your Arduino Nano.
