@@ -1,4 +1,4 @@
-# Stand Alone Arduino ATmega328p pu
+# Flashing avr-gcc binaries to a standalone atmega328p-pu using an Arduino Nano
 
 To turn a Nano into a programmer burn the "ArduinoISP" sketch to it under "file"->"examples"->"ArduinoISP" in the Arduino IDE
 If you are using the Arduino 1.0 or later IDE you need to change the delay value of the heartbeat:
