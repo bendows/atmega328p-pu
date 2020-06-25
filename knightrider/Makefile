@@ -9,11 +9,11 @@ TTYUSB?=ttyUSB0
 
 print_vars:
 	avrdude -vvvV -c stk500v1 -p ATMEGA328P -P /dev/$(TTYUSB) -b 19200
-	echo $(FILENAME)
-	echo $(MCU)
-	echo $(F_CPU)
-	echo $(TTYUSB)
-	echo $(CFLAGS)
+	echo "FILENAME $(FILENAME)"
+	echo "MCU $(MCU)"
+	echo "F_CPU $(F_CPU)"
+	echo "TTYUSB $(TTYUSB)"
+	echo "CFLAGS $(CFLAGS)"
 
 default: $(FILENAME).hex
 
@@ -32,7 +32,7 @@ flash: default
 clean:
 	rm -fv *.o *.hex
 
-internalclock:
+8Mzclock:
 	avrdude -vvvV -c stk500v1 -p ATMEGA328P -P /dev/$(TTYUSB) -b 19200 -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0xff:m
 
 16Mzclock:
