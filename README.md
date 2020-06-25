@@ -38,20 +38,24 @@ Using the Makefile
 
 ```txt
 # Configure the atmega328p fuze bits for selecting it's internal 8MHz clock
+
 sudo make 8MHzclock
 
 # Configure the atmega328p fuze bits for selecting an external 16MHz clock
+
 sudo make 16MHzclock
 
 # Configure the atmega328p fuze bits for selecting it's clock 
 # and compile, and flash main.c to it
 
 sudo FILENAME=main F_CPU=8000000 make 8MHzclock flash
+# or
 sudo FILENAME=main F_CPU=16000000 make 16MHzclock flash
 
 # Just compile and flash main.c
 
 sudo FILENAME=main F_CPU=16000000 make flash
+# or
 sudo FILENAME=main F_CPU=8000000 make flash
 ```
 # Many thanks to these good resources:
