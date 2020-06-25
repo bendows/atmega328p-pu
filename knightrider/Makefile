@@ -24,7 +24,7 @@ flash: default
 	avr-gcc ${CFLAGS} -c -o $@ $<
 
 %.out: %.o
-	vr-gcc -mmcu=atmega328p $< -o $@
+	avr-gcc -mmcu=atmega328p $< -o $@
 
 %.hex: %.out
 	avr-objcopy -O ihex -R .eeprom $< $@
