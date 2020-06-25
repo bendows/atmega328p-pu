@@ -62,11 +62,11 @@ sudo FILENAME=main F_CPU=8000000 make flash
 ```
 ## 4. Breadboard connections for The atmega328p pu
 ```txt
-Don't connect an external crystal to the Atmega328p-pu if it's set to use it's internal 8MHz clock. 
-Connect an external 16MHz crystal to pins 9 and 10 if the Atmega328p-pu is set
-to use an external crystal. I did not need to connect two 22pF caps from pin 9 to GND and 
-from PIN 10 to GND when using an external crystal, but it's probably a good idea 
-to always add them.
+Don't connect an external crystal to the Atmega328p-pu if it's set to use it's
+internal 8MHz clock. Connect an external 16MHz crystal to pins 9 and 10 if the
+Atmega328p-pu is set to use an external crystal. I did not need to connect 
+two 22pF caps from pin 9 to GND and from PIN 10 to GND when using 
+an external crystal, but it's probably a good idea to always add them.
 ```
 ```txt
 VCC = +5V
