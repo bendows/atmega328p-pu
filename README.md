@@ -42,21 +42,21 @@ https://github.com/nickgammon/arduino_sketches
 http://www.gammon.com.au/forum/?id=11635#
 
 ```txt
-# Configure the atmega328p fuze bits for selecting it's internal 8Mz clock
-sudo make 8Mzclock
+# Configure the atmega328p fuze bits for selecting it's internal 8MHz clock
+sudo make 8MHzclock
 
-# Configure the atmega328p fuze bits for selecting an external 16Mz clock
-sudo make 16Mzclock
+# Configure the atmega328p fuze bits for selecting an external 16MHz clock
+sudo make 16MHzclock
 
 # Configure the atmega328p fuze bits for selecting it's clock and compile and flash main.c afterwards
 
-sudo FILENAME=main F_CPU=8000000 make 8Mzclock flash
-sudo FILENAME=main F_CPU=16000000 make 16Mzclock flash
+sudo FILENAME=main F_CPU=8000000 make 8MHzclock flash
+sudo FILENAME=main F_CPU=16000000 make 16MHzclock flash
 
 # Just compile and flash main.c
 
-sudo FILENAME=main F_CPU=16000000 make 16Mzclock flash
-sudo FILENAME=main F_CPU=16000000 make 8Mzclock flash
+sudo FILENAME=main F_CPU=16000000 make 16MHzclock flash
+sudo FILENAME=main F_CPU=16000000 make 8MHzclock flash
 ```
 
 ```txt
@@ -83,10 +83,10 @@ standalone Atmega328p-pu <<->> Arduino Nano connections
 
 	standalone Atmega328p-pu connections and connections to Nano
 
-If the fuses on the standalone Atmega328p-pu is set for using the internal 8Mz clock 
+If the fuses on the standalone Atmega328p-pu is set for using the internal 8MHz clock 
 you dont need to connect an external crystal
 
-If the fuses on the Atmega328p-pu is set for using an external clock, connect an external 16Mz crystal to pins 9 and 10 
+If the fuses on the Atmega328p-pu is set for using an external clock, connect an external 16MHz crystal to pins 9 and 10 
 of the standalone Atmega328p-pu. I did not need to connect two 22pF caps from pin 9 to GND and from PIN 10 to GND 
 respectively, but it's probably a good idea
 ```
@@ -319,7 +319,7 @@ rm knightrider.o knightrider.out
 # avr-projects]$ 
 #
 #
-# ABOVE IS WITH INTERNAL 8Mz 
+# ABOVE IS WITH INTERNAL 8MHz 
 #
 # BELOW IS WITH 16mZ EXTERNAL CRYSTAL
 #
