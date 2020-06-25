@@ -23,7 +23,7 @@ and change the delay(40) to delay(20).
 
 Ubuntu
 ```bash
-apt-get install avrdude gcc-avr avr-libc
+sudo apt-get install avrdude gcc-avr avr-libc
 ```
 
 ArcoLinuxB-openbox
