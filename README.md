@@ -19,14 +19,14 @@ delay(40);
 //
 and change the delay(40) to delay(20).
 ```
-# Then compile and upload the sketch using the Ardiuno IDE.
+## Install software
 
-Install software (Ubuntu)
+(Ubuntu)
 ```bash
 apt-get install avrdude gcc-avr avr-libc
 ```
 
-Install software (ArcoLinuxB-openbox)
+(ArcoLinuxB-openbox)
 ```bash
 pacman -S avr-gcc
 pacman -S avrdude
