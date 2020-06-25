@@ -86,7 +86,7 @@ GND  - C 22pF -	10	19
 		13	16
 		14	15
 ```
-# Using the Arduino Nano as an ISP programmer (running the stk500v1 ISP scetch) to program a standalone Atemga328p pu.
+
 ```txt
 standalone Atmega328p-pu <<->> Arduino Nano connections
 
