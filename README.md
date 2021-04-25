@@ -1,6 +1,11 @@
 # Using the Arduino Nano as an ISP programmer (running the stk500v1 ISP scetch) to program a standalone Atmega328p pu
 
-## 1. Make the Arduino Nano a programmer
+## 1. Setup Arduino IDE
+
+Under Tools -> Board "Arduino Nano" select Arduino Nano
+Under Tools -> Processor Atmega328p select "Atmega328p" (old bootloader)
+Under Tools -> Programmer select AVRISP MKii
+
 Burn the "ArduinoISP" sketch under "file"->"examples"->"ArduinoISP" in the Arduino IDE to your Arduino Nano.
 
 ## 2. Install software and setup permissions
