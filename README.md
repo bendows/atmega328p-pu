@@ -8,6 +8,10 @@ Under Tools -> Processor Atmega328p select "Atmega328p" (old bootloader)
 
 Under Tools -> Programmer select AVRISP MKii
 
+Plug in the Arduino Nano into computer using a USB cable. 
+
+Make sure nothing else is connected to the Arduino Nano
+
 Burn the "ArduinoISP" sketch under "file"->"examples"->"ArduinoISP" in the Arduino IDE to your Arduino Nano.
 
 ## 2. Install software and setup permissions
