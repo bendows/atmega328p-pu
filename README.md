@@ -14,6 +14,8 @@ Make sure nothing else is connected to the Arduino Nano
 
 Burn the "ArduinoISP" sketch under "file"->"examples"->"ArduinoISP" in the Arduino IDE to your Arduino Nano.
 
+Close the Arduino IDE (the rest of this guide does not use the arduino IDE
+
 ## 2. Install software and setup permissions
 
 Ubuntu
