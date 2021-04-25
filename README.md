@@ -3,7 +3,9 @@
 ## 1. Setup Arduino IDE
 
 Under Tools -> Board "Arduino Nano" select Arduino Nano
+
 Under Tools -> Processor Atmega328p select "Atmega328p" (old bootloader)
+
 Under Tools -> Programmer select AVRISP MKii
 
 Burn the "ArduinoISP" sketch under "file"->"examples"->"ArduinoISP" in the Arduino IDE to your Arduino Nano.
